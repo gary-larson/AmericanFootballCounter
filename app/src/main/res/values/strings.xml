@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">American Football Counter</string>
+    <string name="team_a_text">Team A</string>
+    <string name="score_initialized">0</string>
+    <string name="add_six_points">+6 points</string>
+    <string name="add_three_points">+3 points</string>
+    <string name="add_two_points">+2 points</string>
+    <string name="extra_point">Extra Point</string>
+    <string name="number">%d</string>
 </resources>
