@@ -7,4 +7,5 @@
     <string name="add_two_points">+2 points</string>
     <string name="extra_point">Extra Point</string>
     <string name="number">%d</string>
+    <string name="team_b_text">Team B</string>
 </resources>
