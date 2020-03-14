@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
      * @param view - called by onClick
      */
     public void addSixPointsTeamA(View view) {
+        if (scoreTeamA == 0 && scoreTeamB == 0)
+            enableResetButton();
         scoreTeamA += 6;
         isTeamA = true;
         lastScore = 6;
@@ -56,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
      * @param view - called by onClick
      */
     public void addThreePointsTeamA(View view) {
+        if (scoreTeamA == 0 && scoreTeamB == 0)
+            enableResetButton();
         scoreTeamA += 3;
         isTeamA = true;
         lastScore = 3;
@@ -68,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
      * @param view - called by onClick
      */
     public void addTwoPointsTeamA(View view) {
+        if (scoreTeamA == 0 && scoreTeamB == 0)
+            enableResetButton();
         scoreTeamA += 2;
         isTeamA = true;
         lastScore = 2;
@@ -80,6 +86,8 @@ public class MainActivity extends AppCompatActivity {
      * @param view - called by onClick
      */
     public void addExtraPointTeamA(View view) {
+        if (scoreTeamA == 0 && scoreTeamB == 0)
+            enableResetButton();
         scoreTeamA ++;
         isTeamA = true;
         lastScore = 1;
@@ -92,6 +100,8 @@ public class MainActivity extends AppCompatActivity {
      * @param view - called by onClick
      */
     public void addSixPointsTeamB(View view) {
+        if (scoreTeamA == 0 && scoreTeamB == 0)
+            enableResetButton();
         scoreTeamB += 6;
         isTeamA = false;
         lastScore = 6;
@@ -104,6 +114,8 @@ public class MainActivity extends AppCompatActivity {
      * @param view - called by onClick
      */
     public void addThreePointsTeamB(View view) {
+        if (scoreTeamA == 0 && scoreTeamB == 0)
+            enableResetButton();
         scoreTeamB += 3;
         isTeamA = false;
         lastScore = 3;
@@ -116,6 +128,8 @@ public class MainActivity extends AppCompatActivity {
      * @param view - called by onClick
      */
     public void addTwoPointsTeamB(View view) {
+        if (scoreTeamA == 0 && scoreTeamB == 0)
+            enableResetButton();
         scoreTeamB += 2;
         isTeamA = false;
         lastScore = 2;
@@ -128,6 +142,8 @@ public class MainActivity extends AppCompatActivity {
      * @param view - called by onClick
      */
     public void addExtraPointTeamB(View view) {
+        if (scoreTeamA == 0 && scoreTeamB == 0)
+            enableResetButton();
         scoreTeamB ++;
         isTeamA = false;
         lastScore = 1;
@@ -146,6 +162,25 @@ public class MainActivity extends AppCompatActivity {
         displayPointsTeamB(scoreTeamB);
         lastScore = 0;
         disableRemoveLastScoreButton();
+        disableResetButton();
+    }
+
+    /**
+     * This method enables Reset Button
+     */
+    public void enableResetButton() {
+        Button button = findViewById(R.id.reset_button);
+        button.setEnabled(true);
+        button.setAlpha(1f);
+    }
+
+    /**
+     * This method disables Reset Button
+     */
+    public void disableResetButton() {
+        Button button = findViewById(R.id.reset_button);
+        button.setEnabled(false);
+        button.setAlpha(0.5f);
     }
 
     /**
@@ -154,6 +189,7 @@ public class MainActivity extends AppCompatActivity {
     public void enableRemoveLastScoreButton() {
         Button button = findViewById(R.id.remove_last_score_button);
         button.setEnabled(true);
+        button.setAlpha(1f);
     }
 
     /**
@@ -162,6 +198,7 @@ public class MainActivity extends AppCompatActivity {
     public void disableRemoveLastScoreButton() {
         Button button = findViewById(R.id.remove_last_score_button);
         button.setEnabled(false);
+        button.setAlpha(0.5f);
     }
 
     /**
@@ -179,6 +216,8 @@ public class MainActivity extends AppCompatActivity {
             }
             lastScore = 0;
             disableRemoveLastScoreButton();
+            if (scoreTeamA == 0 && scoreTeamB == 0)
+                disableResetButton();
         }
     }
 
