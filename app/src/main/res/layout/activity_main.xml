@@ -5,9 +5,9 @@
     android:layout_height="match_parent">
 
 <LinearLayout
-    android:baselineAligned="false"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:baselineAligned="false">
 
     <LinearLayout
         android:layout_width="0dp"
@@ -19,59 +19,59 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:fontFamily="sans-serif-medium"
             android:paddingTop="32dp"
-            android:textSize="32sp"
+            android:text="@string/team_a_text"
             android:textColor="#001E71"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/team_a_text" />
+            android:textSize="32sp" />
 
         <TextView
             android:id="@+id/score_teamA_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:fontFamily="sans-serif-light"
-            android:layout_gravity="center_horizontal"
-            android:textStyle="bold"
+            android:text="@string/score_initialized"
             android:textSize="56sp"
-            android:text="@string/score_initialized" />
+            android:textStyle="bold" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="addSixPointsTeamA"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
-            android:layout_gravity="center_horizontal"
-            android:textColor="#AEC4FF"
-            android:text="@string/add_six_points" />
+            android:onClick="addSixPointsTeamA"
+            android:text="@string/add_six_points"
+            android:textColor="#AEC4FF" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
             android:onClick="addThreePointsTeamA"
-            android:layout_marginTop="8dp"
-            android:layout_gravity="center_horizontal"
-            android:textColor="#AEC4FF"
-            android:text="@string/add_three_points" />
+            android:text="@string/add_three_points"
+            android:textColor="#AEC4FF" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
             android:onClick="addTwoPointsTeamA"
-            android:layout_marginTop="8dp"
-            android:layout_gravity="center_horizontal"
-            android:textColor="#AEC4FF"
-            android:text="@string/add_two_points" />
+            android:text="@string/add_two_points"
+            android:textColor="#AEC4FF" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="addExtraPointTeamA"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp"
-            android:layout_gravity="center_horizontal"
-            android:textColor="#AEC4FF"
-            android:text="@string/extra_point" />
+            android:onClick="addExtraPointTeamA"
+            android:text="@string/extra_point"
+            android:textColor="#AEC4FF" />
 
     </LinearLayout>
 
@@ -92,58 +92,58 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:fontFamily="sans-serif-medium"
             android:paddingTop="32dp"
-            android:layout_gravity="center_horizontal"
-            android:textSize="32sp"
+            android:text="@string/team_b_text"
             android:textColor="#001E71"
-            android:text="@string/team_b_text" />
+            android:textSize="32sp" />
 
         <TextView
             android:id="@+id/score_teamB_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:fontFamily="sans-serif-light"
-            android:layout_gravity="center_horizontal"
-            android:textStyle="bold"
+            android:text="@string/score_initialized"
             android:textSize="56sp"
-            android:text="@string/score_initialized" />
+            android:textStyle="bold" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="addSixPointsTeamB"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
-            android:layout_gravity="center_horizontal"
-            android:textColor="#AEC4FF"
-            android:text="@string/add_six_points" />
+            android:onClick="addSixPointsTeamB"
+            android:text="@string/add_six_points"
+            android:textColor="#AEC4FF" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
             android:onClick="addThreePointsTeamB"
-            android:layout_marginTop="8dp"
-            android:layout_gravity="center_horizontal"
-            android:textColor="#AEC4FF"
-            android:text="@string/add_three_points" />
+            android:text="@string/add_three_points"
+            android:textColor="#AEC4FF" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
             android:onClick="addTwoPointsTeamB"
-            android:layout_marginTop="8dp"
-            android:layout_gravity="center_horizontal"
-            android:textColor="#AEC4FF"
-            android:text="@string/add_two_points" />
+            android:text="@string/add_two_points"
+            android:textColor="#AEC4FF" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="addExtraPointTeamB"
-            android:layout_marginTop="8dp"
             android:layout_gravity="center_horizontal"
-            android:textColor="#AEC4FF"
-            android:text="@string/extra_point" />
+            android:layout_marginTop="8dp"
+            android:onClick="addExtraPointTeamB"
+            android:text="@string/extra_point"
+            android:textColor="#AEC4FF" />
 
     </LinearLayout>
 
@@ -153,24 +153,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/reset_button"
-        android:layout_marginBottom="8dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:alpha="0.5"
         android:enabled="false"
         android:onClick="removeLastScore"
-        android:textColor="#AEC4FF"
-        android:alpha="0.5"
-        android:text="@string/remove_last_score" />
+        android:text="@string/remove_last_score"
+        android:textColor="#AEC4FF" />
 
     <Button
         android:id="@+id/reset_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="32dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:alpha="0.5"
         android:enabled="false"
         android:onClick="resetScores"
-        android:textColor="#AEC4FF"
-        android:alpha="0.5"
-        android:text="@string/reset" />
+        android:text="@string/reset"
+        android:textColor="#AEC4FF" />
 </RelativeLayout>
