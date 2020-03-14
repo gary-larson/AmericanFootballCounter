@@ -107,4 +107,15 @@ public class MainActivity extends AppCompatActivity {
         displayPointsTeamB(scoreTeamB);
     }
 
+    /**
+     * This method resets both scores and displays on the screen
+     * @param view - called by onClick
+     */
+    public void resetScores(View view) {
+        scoreTeamA = 0;
+        displayPointsTeamA(scoreTeamA);
+        scoreTeamB = 0;
+        displayPointsTeamB(scoreTeamB);
+    }
+
 }
