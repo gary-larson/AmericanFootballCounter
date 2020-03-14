@@ -4,12 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     // Declare and initialize Team scores
     private int scoreTeamA = 0;
     private int scoreTeamB = 0;
+    // Declare variables for remove last score
+    private boolean isTeamA = true;
+    private int lastScore = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addSixPointsTeamA(View view) {
         scoreTeamA += 6;
+        isTeamA = true;
+        lastScore = 6;
+        enableRemoveLastScoreButton();
         displayPointsTeamA(scoreTeamA);
     }
 
@@ -50,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addThreePointsTeamA(View view) {
         scoreTeamA += 3;
+        isTeamA = true;
+        lastScore = 3;
+        enableRemoveLastScoreButton();
         displayPointsTeamA(scoreTeamA);
     }
 
@@ -59,6 +69,9 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addTwoPointsTeamA(View view) {
         scoreTeamA += 2;
+        isTeamA = true;
+        lastScore = 2;
+        enableRemoveLastScoreButton();
         displayPointsTeamA(scoreTeamA);
     }
 
@@ -68,6 +81,9 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addExtraPointTeamA(View view) {
         scoreTeamA ++;
+        isTeamA = true;
+        lastScore = 1;
+        enableRemoveLastScoreButton();
         displayPointsTeamA(scoreTeamA);
     }
 
@@ -77,6 +93,9 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addSixPointsTeamB(View view) {
         scoreTeamB += 6;
+        isTeamA = false;
+        lastScore = 6;
+        enableRemoveLastScoreButton();
         displayPointsTeamB(scoreTeamB);
     }
 
@@ -86,6 +105,9 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addThreePointsTeamB(View view) {
         scoreTeamB += 3;
+        isTeamA = false;
+        lastScore = 3;
+        enableRemoveLastScoreButton();
         displayPointsTeamB(scoreTeamB);
     }
 
@@ -95,6 +117,9 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addTwoPointsTeamB(View view) {
         scoreTeamB += 2;
+        isTeamA = false;
+        lastScore = 2;
+        enableRemoveLastScoreButton();
         displayPointsTeamB(scoreTeamB);
     }
 
@@ -104,6 +129,9 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addExtraPointTeamB(View view) {
         scoreTeamB ++;
+        isTeamA = false;
+        lastScore = 1;
+        enableRemoveLastScoreButton();
         displayPointsTeamB(scoreTeamB);
     }
 
@@ -116,6 +144,42 @@ public class MainActivity extends AppCompatActivity {
         displayPointsTeamA(scoreTeamA);
         scoreTeamB = 0;
         displayPointsTeamB(scoreTeamB);
+        lastScore = 0;
+        disableRemoveLastScoreButton();
+    }
+
+    /**
+     * This method enables Remove Last Score Button
+     */
+    public void enableRemoveLastScoreButton() {
+        Button button = findViewById(R.id.remove_last_score_button);
+        button.setEnabled(true);
+    }
+
+    /**
+     * This method disables Remove Last Score Button
+     */
+    public void disableRemoveLastScoreButton() {
+        Button button = findViewById(R.id.remove_last_score_button);
+        button.setEnabled(false);
+    }
+
+    /**
+     * This method removes last score when referees remove a score after a challenge
+     * @param view - called by onClick
+     */
+    public void removeLastScore(View view) {
+        if (lastScore > 0) {
+            if (isTeamA) {
+                scoreTeamA -= lastScore;
+                displayPointsTeamA(scoreTeamA);
+            } else {
+                scoreTeamB -= lastScore;
+                displayPointsTeamB(scoreTeamB);
+            }
+            lastScore = 0;
+            disableRemoveLastScoreButton();
+        }
     }
 
 }

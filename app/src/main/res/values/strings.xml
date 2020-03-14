@@ -9,4 +9,5 @@
     <string name="number">%d</string>
     <string name="team_b_text">Team B</string>
     <string name="reset">reset</string>
+    <string name="remove_last_score">Remove Last Score</string>
 </resources>

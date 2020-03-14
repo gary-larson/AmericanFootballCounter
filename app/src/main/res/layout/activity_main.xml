@@ -97,8 +97,18 @@
 
     </LinearLayout>
 </LinearLayout>
+    <Button
+        android:id="@+id/remove_last_score_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/reset_button"
+        android:layout_centerHorizontal="true"
+        android:enabled="false"
+        android:onClick="removeLastScore"
+        android:text="@string/remove_last_score" />
 
     <Button
+        android:id="@+id/reset_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
